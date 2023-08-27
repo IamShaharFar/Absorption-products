@@ -1,9 +1,12 @@
 import React from "react";
+import logoImg from "./assets/rom-shivuk.jpg";
 
 const Banner = () => {
-    return(
-        <h1 style={{ fontSize: '100px', textAlign: 'center' }}>Banner</h1>
-    )
-}
+  return (
+    <div className="banner-container">
+      <img className="banner-logo" src={logoImg} alt="Logo" />
+    </div>
+  );
+};
 
 export default Banner;

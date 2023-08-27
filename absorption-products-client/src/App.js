@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import PopUp from "./components/home/PopUp";
+import Banner from "./components/home/Banner";
 import NavBar from "./components/home/NavBar";
 import Home from "./components/Home";
 import Product from "./components/Product";
@@ -216,6 +217,7 @@ function App() {
   return (
     <Router>
       <PopUp />
+      <Banner />
       <NavBar />
       <Routes>
         <Route path="/" element={<Home products={products} />} />
