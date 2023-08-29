@@ -28,7 +28,7 @@ function Product({ products }) {
           <p className="product-price">מחיר: {product.price}₪</p>
           <a
             target="_blank"
-            href={`https://api.whatsapp.com/send?phone=+972526570554&text=${whatsappText} \nhttps://www.limore.co.il/`}
+            href={`https://api.whatsapp.com/send?phone=+972526570554&text=${whatsappText} \nhttps://rom-shivuk.onrender.com/products/${product.id}`}
             className="product-view-button"
           >
             קנה עכשיו
