@@ -8,6 +8,8 @@ const ProductCard = ({ product, isRelatedProduct }) => {
     setShowFullDescription(!showFullDescription);
   };
 
+  const whatsappText = `היי עיינתי באתר רום שיווק וברצוני לבצע רכישה של ${product.name} תודה!`
+
   return (
     <div className={`product-card ${isRelatedProduct ? "related-product" : ""}`}>
       <Link to={`/products/${product.id}`} className="card-link">
@@ -35,7 +37,7 @@ const ProductCard = ({ product, isRelatedProduct }) => {
       <div className="product-bottom">
         <a
           target="_blank"
-          href="https://api.whatsapp.com/send?phone=+972526570554&text=היי, !אני מעוניין לבצע רכישה של מוצרי ספיגה, אשמח שנציג יחזור אלי. תודה"
+          href={`https://api.whatsapp.com/send?phone=+972526570554&text=${whatsappText} \nhttps://www.limore.co.il/`}
           className="product-button"
         >
           קנה עכשיו

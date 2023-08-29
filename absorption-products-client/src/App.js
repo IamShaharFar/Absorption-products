@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import PopUp from "./components/home/PopUp";
 import Banner from "./components/home/Banner";
@@ -212,15 +212,24 @@ function App() {
       imgUrl: "https://static.wixstatic.com/media/eb6e45_d3b3484eaf654fa2afdb732cebcda828~mv2.jpg"
     },
   ];
+  const [filteredProductes, setFilteredProductes] = useState(products) 
+
+
+  const searchHandler = (input) => {
+    const filteredProducts = products.filter(product =>
+      product.name.includes(input)
+    );
+    setFilteredProductes(filteredProducts);
+  }
 
 
   return (
     <Router>
       <PopUp />
       <Banner />
-      <NavBar />
+      <NavBar onSearch={searchHandler}/>
       <Routes>
-        <Route path="/" element={<Home products={products} />} />
+        <Route path="/" element={<Home products={filteredProductes} />} />
         <Route path="/products/:id" element={<Product products={products} />} />
       </Routes>
       <Footer/>

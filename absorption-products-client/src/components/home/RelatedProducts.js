@@ -21,7 +21,7 @@ function RelatedProducts({ products }) {
       </div>
       <div className="related-products-list">
         {randomProducts.map(product => (
-          <ProductCard key={product.id} product={product} isRelatedProduct />
+          <ProductCard className="related-product-card" key={product.id} product={product} isRelatedProduct />
         ))}
       </div>
     </div>
