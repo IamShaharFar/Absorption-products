@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import "../styles/ProductCard.css";
 
 const ProductCard = ({ product, isRelatedProduct }) => {
   const [showFullDescription, setShowFullDescription] = useState(false);
@@ -11,7 +12,7 @@ const ProductCard = ({ product, isRelatedProduct }) => {
   const whatsappText = `היי עיינתי באתר רום שיווק וברצוני לבצע רכישה של ${product.name} תודה!`
 
   return (
-    <div className={`product-card ${isRelatedProduct ? "related-product" : ""}`}>
+    <div className={`product-card ${isRelatedProduct ? "related-product" : ""}`} title={product.description}>
       <Link to={`/products/${product.id}`} className="card-link">
         <div className="product-content">
           <img
@@ -40,7 +41,8 @@ const ProductCard = ({ product, isRelatedProduct }) => {
           href={`https://api.whatsapp.com/send?phone=+972526570554&text=${whatsappText} \nhttps://rom-shivuk.onrender.com/products/${product.id}`}
           className="product-button"
         >
-          קנה עכשיו
+          <i class="fa-brands fa-whatsapp wa-icon"></i>
+          קנה דרך נציג
         </a>
       </div>
     </div>

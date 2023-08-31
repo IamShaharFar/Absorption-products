@@ -1,5 +1,6 @@
 import React from 'react';
 import ProductCard from './ProductCard';
+import "../styles/RelatedProducts.css"
 
 function RelatedProducts({ products }) {
   // Get 3 random product indices

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ProductCard from "./ProductCard";
+import "../styles/Products.css";
 
 const Products = ({ products }) => {
   const categories = ["תחתונים סופגים", "מוצרי ספיגה", "חיתולים למבוגרים"];
@@ -68,7 +69,7 @@ const Products = ({ products }) => {
           </div>
         </div>
 
-        <div className="product-list">
+        <div className="products-list">
             {
                 filteredProducts.length > 0 ? 
                 filteredProducts.map((item, index) => (
