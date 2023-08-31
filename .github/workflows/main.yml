@@ -28,7 +28,6 @@ jobs:
         if: GitHub.ref == 'refs/heads/main'
         run: |
           ls
-          cd ./absorption-products-client
           aws configure set region eu-west-1
           aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
