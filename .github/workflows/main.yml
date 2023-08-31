@@ -25,9 +25,12 @@ jobs:
         run: cd ./absorption-products-client &&  CI=false npm run build
 
       - name: Deploy to AWS S3
-        if: github.ref == 'refs/heads/main'
+        if: GitHub.ref == 'refs/heads/main'
         run: |
+          ls
+          cd ./absorption-products-client
+          ls
           aws configure set region eu-west-1
           aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws s3 sync build/ s3://rom-shivuk-s3/store
+          aws s3 sync build/ s3://rom-shivuk-s3/store ./build
