@@ -1,0 +1,119 @@
+/*product card.css*/
+
+.product-card {
+  width: 300px;
+  height: 430px;
+  /* Fixed height */
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #f5f5f5;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  /* Hide overflowing content */
+}
+
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card-link:hover {
+  background-color: #f5f5f5;
+}
+
+.product-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  align-items: center;
+  height: 100%;
+  /* Fill the available height */
+  overflow: hidden;
+  /* Hide overflowing content */
+}
+
+.product-image {
+  max-width: 100%;
+  max-height: 150px;
+  /* Adjust the maximum height for consistency */
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.product-title {
+  font-size: 1.5rem;
+  margin: 0;
+  color: #333;
+  text-align: center;
+  white-space: normal;
+  /* Allow text to wrap */
+  word-wrap: break-word;
+}
+
+.product-description {
+  font-size: 0.9rem;
+  color: #666;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.product-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.product-bottom{
+  margin-bottom: 10px;
+}
+
+.product-button {
+  background-color: #25d366;
+  color: black;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  border-radius: 45px;
+}
+
+.product-button:hover {
+  background-color: #128c7e;
+}
+
+.wa-icon {
+  margin-right: 10px;
+}
+
+@media (max-width: 767px) {
+  .product-card {
+    height: 350px;
+  }
+
+  .product-description {
+    display: none;
+  }
+
+  .product-price {
+    margin-top: 20px;
+  }
+
+  .product-button {
+    font-size: 0.8rem;
+    margin-top: -20px;
+  }
+}

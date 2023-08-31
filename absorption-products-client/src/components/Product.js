@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import RelatedProducts from "./home/RelatedProducts";
 import { useParams } from "react-router-dom";
 import "./styles/ProductView.css";
@@ -222,9 +222,14 @@ function Product() {
         "https://static.wixstatic.com/media/eb6e45_d3b3484eaf654fa2afdb732cebcda828~mv2.jpg",
     },
   ];
-  const { id } = useParams();
 
-  // Find the product with the matching ID from the products array
+  
+  const { id } = useParams();
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]);
+
   const product = products.find((item) => item.id === parseInt(id));
 
   const whatsappText = `היי עיינתי באתר רום שיווק וברצוני לבצע רכישה של ${product.name} תודה!`;
