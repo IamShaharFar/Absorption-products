@@ -19,7 +19,7 @@ jobs:
           node-version: 18.14
 
       - name: Install Dependencies
-        run: ls && cd ./Absorption-products/absorption-products-client && npm install
+        run: ls && cd ./absorption-products-client && npm install
 
       - name: Build
         run: npm run build
