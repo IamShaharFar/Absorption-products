@@ -12,9 +12,6 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
-        
-      - name: cancel-env
-        run: export CI=false
          
       - name: Set up Node.js
         uses: actions/setup-node@v2
@@ -25,7 +22,7 @@ jobs:
         run: ls && cd ./absorption-products-client && npm install
 
       - name: Build
-        run: cd ./absorption-products-client && npm run build
+        run: cd ./absorption-products-client &&  CI=false npm run build
 
       - name: Deploy to AWS S3
         if: github.ref == 'refs/heads/main'
