@@ -255,7 +255,7 @@ function Product() {
             href={`https://api.whatsapp.com/send?phone=+972526570554&text=${whatsappText} \nhttps://rom-shivuk.onrender.com/products/${product.id}`}
             className="product-view-button"
           >
-            <i class="fa-brands fa-whatsapp wa-icon"></i>
+            <i className="fa-brands fa-whatsapp wa-icon"></i>
             קנה דרך נציג
           </a>
         </div>

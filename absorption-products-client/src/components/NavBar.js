@@ -59,12 +59,12 @@ function NavBar({ onSearch }) {
       </div>
       <div className="navbar-search">
         <input
-          class="custom-input"
+          className="custom-input"
           type="text"
           placeholder="אני מחפש לקנות"
           onChange={handleInputChange}
         />
-        <i class="fa-solid fa-magnifying-glass"></i>
+        <i className="fa-solid fa-magnifying-glass"></i>
       </div>
       <div className="navbars">
         <Navbar className="bg-body-tertiary navbar-brand-container">
