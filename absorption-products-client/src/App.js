@@ -228,7 +228,7 @@ function App() {
       <NavBar onSearch={searchHandler}/>
       <Routes>
         <Route path="/" element={<Home products={filteredProductes} />} />
-        <Route path="/products" element={<Product />} />
+        <Route path="/products/:id" element={<Product />} />
       </Routes>
       <Footer/>
     </Router>
