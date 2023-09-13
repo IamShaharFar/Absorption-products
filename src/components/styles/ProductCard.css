@@ -104,6 +104,11 @@
     height: 350px;
   }
 
+  .product-image{
+    object-fit: contain;
+    height: 100px;
+  }
+
   .product-description {
     display: none;
   }
@@ -112,8 +117,11 @@
     margin-top: 20px;
   }
 
+  .product-bottom{
+    margin-top: 20px;
+  }
+
   .product-button {
     font-size: 0.8rem;
-    margin-top: -20px;
   }
 }

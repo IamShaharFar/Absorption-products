@@ -45,6 +45,10 @@
     /* Add the transition property for the scroll effect */
 }
 
+.house-button{
+    margin-top: 20px;
+}
+
 .navbar-search {
     margin-top: 20px;
 }

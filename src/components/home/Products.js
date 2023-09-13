@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ProductCard from "./ProductCard";
 import "../styles/Products.css";
+import logoImg from "../assets/rom-shivuk.jpg";
 
 const Products = ({ products }) => {
   const categories = ["תחתונים סופגים", "מוצרי ספיגה", "חיתולים למבוגרים"];
@@ -30,7 +31,9 @@ const Products = ({ products }) => {
 
   return (
     <div className="products-component">
-
+      <div className="mobile-logo-container">
+        <img className="mobile-logo" src={logoImg} />
+      </div>
       <h2 className="hot-deals-heading">המוצרים שלנו</h2>
       <div className="products-and-filter">
         <div className="filter-container">
@@ -70,13 +73,13 @@ const Products = ({ products }) => {
         </div>
 
         <div className="products-list">
-            {
-                filteredProducts.length > 0 ? 
-                filteredProducts.map((item, index) => (
-                    <ProductCard className="home-p-card" product={item} key={index} />
-                  ))
-                  : <h1>סליחה, לא נמצאו מוצרים התואמים לחיפוש</h1>
-            }
+          {filteredProducts.length > 0 ? (
+            filteredProducts.map((item, index) => (
+              <ProductCard className="home-p-card" product={item} key={index} />
+            ))
+          ) : (
+            <h1>סליחה, לא נמצאו מוצרים התואמים לחיפוש</h1>
+          )}
         </div>
       </div>
     </div>
