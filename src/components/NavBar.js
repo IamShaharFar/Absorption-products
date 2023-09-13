@@ -57,12 +57,14 @@ function NavBar({ onSearch }) {
           />
         </Link>
       </div>
+      {isMobile && <Link to={`/`}><i class="fa-solid fa-house fa-2xl house-button"></i></Link>}
       <div className="navbar-search">
         <input
           className="custom-input"
           type="text"
           placeholder="אני מחפש לקנות"
           onChange={handleInputChange}
+          dir="rtl"
         />
         <i className="fa-solid fa-magnifying-glass"></i>
       </div>

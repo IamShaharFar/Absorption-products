@@ -252,7 +252,8 @@ function Product() {
           <p className="product-view-price">מחיר: {product.price}₪</p>
           <a
             target="_blank"
-            href={`https://api.whatsapp.com/send?phone=+972526570554&text=${whatsappText} \nhttps://rom-shivuk.onrender.com/products/${product.id}`}
+            href={`https://api.whatsapp.com/send?phone=+972526570554&text=${whatsappText} \n\n\n
+            https://rom-shivuk.co.il/#/products/${product.id}`}
             className="product-view-button"
           >
             <i className="fa-brands fa-whatsapp wa-icon"></i>
