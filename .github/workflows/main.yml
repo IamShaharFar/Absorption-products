@@ -19,15 +19,15 @@ jobs:
           node-version: 18.14
 
       - name: Install Dependencies
-        run: ls && cd ./absorption-products-client && npm install
+        run: ls && npm install
 
       - name: Build
-        run: cd ./absorption-products-client &&  CI=false npm run build
+        run: CI=false npm run build
 
       - name: Deploy to AWS S3
         if: GitHub.ref == 'refs/heads/main'
         run: |
-          cd ./absorption-products-client/build
+          cd ./build
           ls
           aws configure set region eu-west-1
           aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
