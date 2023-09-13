@@ -1,6 +1,7 @@
 {
   "name": "absorption-products-client",
   "version": "0.1.0",
+  "description": "רום שיווק, מוצרי ספיגה למבוגרים",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
