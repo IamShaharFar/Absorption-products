@@ -1,0 +1,40 @@
+.related-products {
+    margin-top: 40px;
+}
+
+.related-products-header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.related-products-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 0;
+}
+
+.related-products-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.related-product {
+    width: calc(33.33% - 20px);
+    margin: 0;
+  }
+
+  .related-product-card .product-title {
+    font-size: 20px;
+    background-color: #333;
+  }
+
+  .related-product > .product-bottom{
+    display: flex;
+    justify-content: center;
+  }
+
+  .related-product .product-description{
+    display: flex;
+    justify-content: center;
+  }
