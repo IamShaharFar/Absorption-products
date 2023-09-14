@@ -106,6 +106,7 @@
   @media (max-width: 767px){
     .related-product-card{
       width: calc(42%);
+      justify-content: space-between;
     }
 
     .related-product-title{
@@ -116,6 +117,20 @@
     .related-product-price {
       font-size: 1rem;
       margin-top: -20px;
+      margin-bottom: 0px;
+    }
+
+    .related-product-button{
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      margin-bottom: 0px;
+    }
+
+    .related-product-button-text{
+      width: 65px;
+      font-size: 0.8rem;
     }
 
   }

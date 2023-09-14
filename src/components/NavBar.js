@@ -57,7 +57,7 @@ function NavBar({ onSearch }) {
           />
         </Link>
       </div>
-      {isMobile && <Link to={`/`}><i class="fa-solid fa-house fa-2xl house-button"></i></Link>}
+      {isMobile && <Link to={`/`}><img className="mobile-home-button" src={logoImg}/></Link>}
       <div className="navbar-search">
         <input
           className="custom-input"

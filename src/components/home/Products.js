@@ -12,28 +12,35 @@ const Products = ({ products }) => {
     name: "",
   });
 
-  const filteredProducts = products.filter((product) => {
-    const matchesPrice =
-      !filterOptions.price ||
-      (filterOptions.price === "high" && product.price >= 50) ||
-      (filterOptions.price === "low" && product.price < 50);
+  const filteredProducts = products
+    .filter((product) => {
+      const matchesCategory =
+        !filterOptions.category || product.categories.includes(filterOptions.category);
 
-    const matchesCategory =
-      !filterOptions.category ||
-      product.categories.includes(filterOptions.category);
+      return matchesCategory;
+    })
+    .filter((product) => {
+      const matchesName =
+        !filterOptions.name ||
+        product.name.toLowerCase().includes(filterOptions.name.toLowerCase());
 
-    const matchesName =
-      !filterOptions.name ||
-      product.name.toLowerCase().includes(filterOptions.name.toLowerCase());
-
-    return matchesPrice && matchesCategory && matchesName;
-  });
+      return matchesName;
+    })
+    .sort((a, b) => {
+      if (filterOptions.price === "low") {
+        return a.price - b.price;
+      } else if (filterOptions.price === "high") {
+        return b.price - a.price;
+      }
+      return 0;
+    });
 
   return (
     <div className="products-component">
       <div className="mobile-logo-container">
-        <img className="mobile-logo" src={logoImg} />
+        <img className="mobile-logo" src={logoImg} alt="Logo" />
       </div>
+      <hr />
       <h2 className="hot-deals-heading">המוצרים שלנו</h2>
       <div className="products-and-filter">
         <div className="filter-container">

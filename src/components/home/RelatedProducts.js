@@ -84,7 +84,7 @@ function RelatedProducts({ products }) {
                   className="related-product-button"
                 >
                   <i className="fa-brands fa-whatsapp wa-icon"></i>
-                  קנה דרך נציג
+                  <span className="related-product-button-text">קנה דרך נציג</span>
                 </a>
               </div>
             </div>

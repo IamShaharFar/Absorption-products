@@ -48,12 +48,22 @@
 
 @media (max-width: 767px) {
 
+    .mobile-logo-container{
+        margin-bottom: 20px;
+
+    }
+
     .mobile-logo {
         display: block;
         height: 110px;
         object-fit: contain;
         margin-bottom: 10px;
         margin-top: 20px;
+    }
+    
+    .hot-deals-heading {
+        font-size: 40px;
+        font-weight: 400;
     }
 
     .filter-container {

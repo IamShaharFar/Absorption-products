@@ -35,6 +35,11 @@
     animation: moveLogoUnscrolled 0.8s ease forwards;
 }
 
+.mobile-home-button{
+    height: 30px;
+    margin-top: 5px;
+}
+
 .banner-logo {
     max-width: 100%;
     max-height: 100%;
