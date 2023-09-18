@@ -35,9 +35,18 @@
     animation: moveLogoUnscrolled 0.8s ease forwards;
 }
 
-.mobile-home-button{
+/* .mobile-home-button {
     height: 30px;
     margin-top: 5px;
+} */
+
+.mobile-home-button {
+    height: 100px;
+    transition: height 0.6s ease;
+}
+
+.mobile-home-button.scrolled {
+    height: 30px;
 }
 
 .banner-logo {
@@ -50,7 +59,7 @@
     /* Add the transition property for the scroll effect */
 }
 
-.house-button{
+.house-button {
     margin-top: 20px;
 }
 
@@ -74,6 +83,25 @@
     direction: rtl;
     text-align: right;
     padding-right: 0.8em;
+}
+
+.search-result-container {
+    display: none;
+    position: relative;
+    /* display: flex; */
+    justify-content: center;
+}
+
+.search-result {
+    height: 300px;
+    width: 90%;
+    background-color: aqua;
+    width: 300px;
+    position: absolute;
+    top: 10px;
+    z-index: 999;
+    padding: 10px;
+    border: 1px solid #ccc;
 }
 
 .navbars {

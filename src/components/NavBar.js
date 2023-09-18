@@ -57,7 +57,11 @@ function NavBar({ onSearch }) {
           />
         </Link>
       </div>
-      {isMobile && <Link to={`/`}><img className="mobile-home-button" src={logoImg}/></Link>}
+      {isMobile && (
+        <Link to={`/`}>
+          <img className={`mobile-home-button ${isScrolled ? "scrolled" : ""}`} src={logoImg} />
+        </Link>
+      )}
       <div className="navbar-search">
         <input
           className="custom-input"
@@ -67,6 +71,9 @@ function NavBar({ onSearch }) {
           dir="rtl"
         />
         <i className="fa-solid fa-magnifying-glass"></i>
+      </div>
+      <div className="search-result-container">
+        <div className="search-result"></div>
       </div>
       <div className="navbars">
         <Navbar className="bg-body-tertiary navbar-brand-container">

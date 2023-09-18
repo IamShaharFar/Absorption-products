@@ -61,6 +61,33 @@
         margin-top: 20px;
     }
     
+    .products-list {
+        gap: 0px;
+    }
+
+    .product-card {
+        width: 43%;
+    }
+
+    .product-title{
+        font-size: 1rem;
+    }
+
+    .product-price{
+        font-size: 0.9rem;
+        margin-top: 0px;
+        margin-bottom: 20px;
+    }
+
+    .product-button{
+        font-size: 0.6rem;
+        font-weight: bold;
+    }
+
+    .wa-icon{
+        font-weight: bold;
+    }
+
     .hot-deals-heading {
         font-size: 40px;
         font-weight: 400;
@@ -85,6 +112,6 @@
     }
 
     .products-component {
-        margin-top: 70px;
+        margin-top: 160px;
     }
 }

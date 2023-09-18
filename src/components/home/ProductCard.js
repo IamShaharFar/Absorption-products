@@ -9,10 +9,15 @@ const ProductCard = ({ product, isRelatedProduct }) => {
     setShowFullDescription(!showFullDescription);
   };
 
-  const whatsappText = `היי עיינתי באתר רום שיווק וברצוני לבצע רכישה של ${product.name} תודה!`
+  const whatsappText = `היי עיינתי באתר רום שיווק וברצוני לבצע רכישה של ${product.name} תודה!`;
+  const productUrl = `https://rom-shivuk.co.il/#/products/${product.id}`
+  const encodedProductUrl = encodeURIComponent(productUrl);
 
   return (
-    <div className={`product-card ${isRelatedProduct ? "related-product" : ""}`} title={product.description}>
+    <div
+      className={`product-card ${isRelatedProduct ? "related-product" : ""}`}
+      title={product.description}
+    >
       <Link to={`/products/${product.id}`} className="card-link">
         <div className="product-content">
           <img
@@ -32,14 +37,14 @@ const ProductCard = ({ product, isRelatedProduct }) => {
               ? "..." + product.description.slice(0, 30)
               : product.description}
           </p>
-          <p className="product-price">מחיר: {product.price}₪</p>
         </div>
       </Link>
       <div className="product-bottom">
+        <p className="product-price">מחיר: {product.price}₪</p>
         <a
           target="_blank"
-          href={`https://api.whatsapp.com/send?phone=+972526570554&text=${whatsappText} \n\n\n
-          https://rom-shivuk.co.il/#/products/${product.id}`}
+          href={`https://api.whatsapp.com/send?phone=+972526570554&text=${whatsappText}
+          ${encodedProductUrl}`}
           className="product-button"
         >
           <i className="fa-brands fa-whatsapp wa-icon"></i>
