@@ -239,7 +239,7 @@ function App() {
   return (
     <div className="">
       <PopUp />
-      <NavBar onSearch={searchHandler} />
+      <NavBar onSearch={searchHandler} products={products}/>
       <Routes>
         <Route path="/" element={<Home products={filteredProductes} />} />
         <Route path="/products/:id" element={<Product />} />
