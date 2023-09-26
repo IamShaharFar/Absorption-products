@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Accessibility } from "accessibility/dist/main";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import PopUp from "./components/PopUp";
 import NavBar from "./components/NavBar";
@@ -227,6 +228,39 @@ function App() {
       imgUrl: "https://semantic-ui.com/images/wireframe/image.png",
     },
   ];
+
+  var labels = {
+    resetTitle: "איפוס להגדרות ברירת מחדל",
+    closeTitle: "סגור",
+    menuTitle: "תפריט",
+    increaseText: "הגדל גודל טקסט",
+    decreaseText: "הפחת גודל טקסט",
+    increaseTextSpacing: "הגדל מרווח טקסט",
+    decreaseTextSpacing: "הפחת מרווח טקסט",
+    increaseLineHeight: "הגדל גובה שורה",
+    decreaseLineHeight: "הפחת גובה שורה",
+    invertColors: "הפוך צבעים",
+    grayHues: "גווני אפור",
+    underlineLinks: "קו תחתון לקישורים",
+    bigCursor: "סמן גדול",
+    readingGuide: "מדריך קריאה",
+    textToSpeech: "טקסט לדיבור",
+    speechToText: "דיבור לטקסט",
+    disableAnimations: "ביטול הנפשות",
+  };
+
+  var options = {
+    labels: labels,
+  };
+
+  window.addEventListener(
+    "load",
+    function () {
+      new Accessibility(options);
+    },
+    false
+  );
+
   const [filteredProductes, setFilteredProductes] = useState(products);
 
   const searchHandler = (input) => {
@@ -239,7 +273,7 @@ function App() {
   return (
     <div className="">
       <PopUp />
-      <NavBar onSearch={searchHandler} products={products}/>
+      <NavBar onSearch={searchHandler} products={products} />
       <Routes>
         <Route path="/" element={<Home products={filteredProductes} />} />
         <Route path="/products/:id" element={<Product />} />

@@ -91,7 +91,7 @@ function NavBar({ onSearch, products }) {
         />
         <i className="fa-solid fa-magnifying-glass"></i>
       </div>
-      <div className="search-result-container">
+      {/* <div className="search-result-container">
         <div className="search-result">
           <ul>
             {searchResults.length > 0 && <span>lolol</span> &&
@@ -108,7 +108,7 @@ function NavBar({ onSearch, products }) {
               ))}
           </ul>
         </div>
-      </div>
+      </div> */}
       <div className="navbars">
         <Navbar className="bg-body-tertiary navbar-brand-container">
           <Container className="navbar-brand-container">
