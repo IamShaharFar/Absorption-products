@@ -35,9 +35,18 @@
     animation: moveLogoUnscrolled 0.8s ease forwards;
 }
 
-.mobile-home-button{
+/* .mobile-home-button {
     height: 30px;
     margin-top: 5px;
+} */
+
+.mobile-home-button {
+    height: 100px;
+    transition: height 0.6s ease;
+}
+
+.mobile-home-button.scrolled {
+    height: 30px;
 }
 
 .banner-logo {
@@ -50,7 +59,7 @@
     /* Add the transition property for the scroll effect */
 }
 
-.house-button{
+.house-button {
     margin-top: 20px;
 }
 
@@ -74,6 +83,43 @@
     direction: rtl;
     text-align: right;
     padding-right: 0.8em;
+}
+
+.search-result-container {
+    position: relative;
+    display: inline-block;
+}
+
+.search-result {
+    height: auto;
+    max-height: 300px;
+    width: 700px;
+    background-color: #f5f5f5;
+    max-width: 300px;
+    position: absolute;
+    top: 100%; /* Change this to position it below the input */
+    left: -150px; /* Change this to position it at the same left edge as the input */
+    transform: translate(0, 0); /* Remove the previous transform */
+    z-index: 999;
+    padding: 10px;
+    border: 1px solid #ccc;
+    overflow-y: auto;
+    direction: rtl;
+}
+
+.search-result ul {
+    list-style: none;
+}
+
+.search-result-content{
+    display: flex;
+    flex-direction: row;
+}
+
+.result-image{
+    height: 40px;
+    object-fit: contain;
+    margin-left: 20px;
 }
 
 .navbars {
@@ -134,6 +180,10 @@
 
     .scrolled .navbars {
         display: none;
+    }
+
+    .search-result{
+        width: 300px;
     }
 }
 

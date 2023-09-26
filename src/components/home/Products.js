@@ -37,10 +37,6 @@ const Products = ({ products }) => {
 
   return (
     <div className="products-component">
-      <div className="mobile-logo-container">
-        <img className="mobile-logo" src={logoImg} alt="Logo" />
-      </div>
-      <hr />
       <h2 className="hot-deals-heading">המוצרים שלנו</h2>
       <div className="products-and-filter">
         <div className="filter-container">
