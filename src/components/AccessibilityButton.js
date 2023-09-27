@@ -1,42 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { Accessibility } from "accessibility/dist/main";
+import { AccessibilityContext } from "./Accesability/AccessibilityProvider";
 import "./styles/Accesability.css";
 
 function AccessibilityButton() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const labels = {
-    resetTitle: "איפוס להגדרות ברירת מחדל",
-    closeTitle: "סגור",
-    menuTitle: "תפריט",
-    increaseText: "הגדל גודל טקסט",
-    decreaseText: "הפחת גודל טקסט",
-    increaseTextSpacing: "הגדל מרווח טקסט",
-    decreaseTextSpacing: "הפחת מרווח טקסט",
-    increaseLineHeight: "הגדל גובה שורה",
-    decreaseLineHeight: "הפחת גובה שורה",
-    invertColors: "הפוך צבעים",
-    grayHues: "גווני אפור",
-    underlineLinks: "קו תחתון לקישורים",
-    bigCursor: "סמן גדול",
-    readingGuide: "מדריך קריאה",
-    textToSpeech: "טקסט לדיבור",
-    speechToText: "דיבור לטקסט",
-    disableAnimations: "ביטול הנפשות",
-  };
-
-  const options = {
-    labels: labels,
-    icon: {
-      position: {
-        bottom: { size: -200, units: "px" },
-        right: { size: 0, units: "px" },
-        type: "fixed",
-      },
-    },
-  };
-
-   const instance = new Accessibility(options);
+  const accessibilityInstance = useContext(AccessibilityContext);
 
   const [menuVisible, setMenuVisible] = useState(false);
 
@@ -45,39 +13,39 @@ function AccessibilityButton() {
   };
 
   const increaseText = () => {
-    instance.menuInterface.increaseText();
+    accessibilityInstance.menuInterface.increaseText();
   };
 
   const decreaseText = () => {
-    instance.menuInterface.decreaseText();
+    accessibilityInstance.menuInterface.decreaseText();
   };
 
   const increaseTextSpacing = () => {
-    instance.menuInterface.increaseTextSpacing();
+    accessibilityInstance.menuInterface.increaseTextSpacing();
   };
 
   const decreaseTextSpacing = () => {
-    instance.menuInterface.decreaseTextSpacing();
+    accessibilityInstance.menuInterface.decreaseTextSpacing();
   };
 
   const invertColors = () => {
-    instance.menuInterface.invertColors();
+    accessibilityInstance.menuInterface.invertColors();
   }
 
   const grayHues = () => {
-    instance.menuInterface.grayHues();
+    accessibilityInstance.menuInterface.grayHues();
   };
 
   const underlineLinks = () => {
-    instance.menuInterface.underlineLinks();
+    accessibilityInstance.menuInterface.underlineLinks();
   };
 
   const textToSpeech = () => {
-    instance.menuInterface.textToSpeech();
+    accessibilityInstance.menuInterface.textToSpeech();
   };
 
   const speechToText = () => {
-    instance.menuInterface.speechToText();
+    accessibilityInstance.menuInterface.speechToText();
   };
   
   return (
