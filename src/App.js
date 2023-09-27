@@ -8,6 +8,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import Footer from "./components/Footer";
 import AccessibilityButton from "./components/AccessibilityButton";
+import { AccessibilityProvider } from "./components/Accesability/AccessibilityProvider";
 
 function App() {
   const products = [
@@ -229,8 +230,6 @@ function App() {
     },
   ];
 
-
-
   const [filteredProductes, setFilteredProductes] = useState(products);
 
   const searchHandler = (input) => {
@@ -241,16 +240,18 @@ function App() {
   };
 
   return (
-    <div className="root">
-      <AccessibilityButton />
-      <PopUp />
-      <NavBar onSearch={searchHandler} products={products} />
-      <Routes>
-        <Route path="/" element={<Home products={filteredProductes} />} />
-        <Route path="/products/:id" element={<Product />} />
-      </Routes>
-      <Footer />
-    </div>
+    <AccessibilityProvider>
+      <div className="root">
+        <AccessibilityButton />
+        <PopUp />
+        <NavBar onSearch={searchHandler} products={products} />
+        <Routes>
+          <Route path="/" element={<Home products={filteredProductes} />} />
+          <Route path="/products/:id" element={<Product />} />
+        </Routes>
+        <Footer />
+      </div>
+    </AccessibilityProvider>
   );
 }
 
