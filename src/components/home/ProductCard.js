@@ -48,7 +48,7 @@ const ProductCard = ({ product, isRelatedProduct }) => {
           className="product-button"
         >
           <i className="fa-brands fa-whatsapp wa-icon"></i>
-          קנה דרך נציג
+          <span className="product-button-text">קנה דרך נציג</span>
         </a>
       </div>
     </div>

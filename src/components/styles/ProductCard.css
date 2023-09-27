@@ -124,5 +124,11 @@
 
   .product-button {
     font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .product-button-text{
+    font-size: 0.6rem;
   }
 }
