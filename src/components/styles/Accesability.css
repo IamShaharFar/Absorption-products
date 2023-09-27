@@ -1,0 +1,41 @@
+.accessibility-menu {
+  position: fixed;
+  bottom: 40px;
+  left: 20px;
+  z-index: 1000;
+}
+
+.accessibility-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.accessibility-options {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  bottom: 40px;
+  left: 70px;
+  width: 200px;
+  height: 500px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
+
+.accessibility-options.open {
+  display: block;
+}
+
+.accessibility-options button {
+  margin: 5px;
+}
