@@ -7,8 +7,7 @@ import Product from "./components/Product";
 import logo from "./logo.svg";
 import "./App.css";
 import Footer from "./components/Footer";
-import AccessibilityButton from "./components/AccessibilityButton";
-import { AccessibilityProvider } from "./components/Accesability/AccessibilityProvider";
+import { Accessibility } from "accessibility-react/dist/index";
 
 function App() {
   const products = [
@@ -240,18 +239,16 @@ function App() {
   };
 
   return (
-    <AccessibilityProvider>
-      <div className="root">
-        <AccessibilityButton />
-        <PopUp />
-        <NavBar onSearch={searchHandler} products={products} />
-        <Routes>
-          <Route path="/" element={<Home products={filteredProductes} />} />
-          <Route path="/products/:id" element={<Product />} />
-        </Routes>
-        <Footer />
-      </div>
-    </AccessibilityProvider>
+    <div className="root">
+      <PopUp />
+      <NavBar onSearch={searchHandler} products={products} />
+      <Routes>
+        <Route path="/" element={<Home products={filteredProductes} />} />
+        <Route path="/products/:id" element={<Product />} />
+      </Routes>
+      <Footer />
+      <Accessibility/>
+    </div>
   );
 }
 

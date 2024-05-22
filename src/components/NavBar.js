@@ -110,7 +110,16 @@ function NavBar({ onSearch, products }) {
         </div>
       </div> */}
       <div className="navbars">
-        <Navbar className="bg-body-tertiary navbar-brand-container">
+        <button className="navbar-button">
+          מוצרי ספיגה
+        </button>
+        <button className="navbar-button">
+          מוצרי ספיגה
+        </button>
+        <button className="navbar-button">
+          מוצרי ספיגה
+        </button>
+        {/* <Navbar className="bg-body-tertiary navbar-brand-container">
           <Container className="navbar-brand-container">
             <Navbar.Brand href="#home" className="navbar-brand">
               צור קשר
@@ -130,7 +139,7 @@ function NavBar({ onSearch, products }) {
               מוצרי ספיגה
             </Navbar.Brand>
           </Container>
-        </Navbar>
+        </Navbar> */}
       </div>
     </div>
   );
