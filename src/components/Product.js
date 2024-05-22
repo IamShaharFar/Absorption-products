@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import RelatedProducts from "./home/RelatedProducts";
 import { useParams } from "react-router-dom";
 import "./styles/ProductView.css";
@@ -16,19 +16,36 @@ function Product() {
     },
     {
       id: 2,
-      name: "סינרים חד פעמיים להאכלה 100 יח'",
-      description: "",
-      categories: [],
-      price: "35.00",
-      imgUrl: "https://semantic-ui.com/images/wireframe/image.png",
+      name: `(42-44) L "חיתולי שקמה "אובר נייט`,
+      description: `שקמה מכנסונים סופגים גזרתי אובר נייט , מידה L
+      15 יחידות
+      מוצרי ספיגה של שקמה לספיגה מקסימלית ולשמירה על שכבת מגע יבשה
+      • לוכדי נוזלים כפולים למניעת נזילות
+      • מכנסון אובר נייט של שקמה הוא בעל כושר ספיגה של עד 12 שעות ומתאים לשימוש במהלך הלילה.
+      • סגירה רב פעמית: מנגנון סגירה המאפשר סגירה ופתיחה רב פעמיים
+      • מגע נושם ואוורירי: שכבה פנימית וחיצונית דמוית`,
+      categories: ["תחתונים סופגים", "חיתולים למבוגרים"],
+      price: "60.00",
+      imgUrl:
+        "https://static.wixstatic.com/media/eb6e45_a519cf307e304b7d8c12fbbcac616608~mv2.png",
     },
     {
       id: 3,
-      name: "כפפות חד פעמיות ניטריל",
-      description: "",
-      categories: [],
-      price: "25.00",
-      imgUrl: "https://semantic-ui.com/images/wireframe/image.png",
+      name: `(38-40) M "חיתולי שקמה "אובר נייט`,
+      description: `שקמה מכנסונים סופגים גזרתי אובר נייט , מידה M
+      15 יחידות
+      מוצרי ספיגה של שקמה לספיגה מקסימלית ולשמירה על שכבת מגע יבשה
+      
+      לוכדי נוזלים כפולים למניעת נזילות
+      מכנסון אובר נייט של שקמה הוא בעל כושר ספיגה של עד 12 שעות ומתאים לשימוש במהלך הלילה.
+      סגירה רב פעמית: מנגנון סגירה המאפשר סגירה ופתיחה רב פעמיים
+      מגע נושם ואוורירי: שכבה פנימית וחיצונית דמוית בד, נושמת ואוורירית המעניקה מגע רך ומסייעת במניעת גירויים
+      מכנסונים סופגים גזרתיים לשעות היום – לאנשים הזקוקים למוצרים בעלי יכולת ספיגה גבוהה
+      מכנסונים סופגים גזרתיים לשעות הלילה – לאנשים הזקוקים לדרגת הספיגה הגבוהה ביותר או לאנשים הנוטלים תרופות משתנות`,
+      categories: ["תחתונים סופגים", "חיתולים למבוגרים"],
+      price: "60.00",
+      imgUrl:
+        "https://static.wixstatic.com/media/eb6e45_d3b3484eaf654fa2afdb732cebcda828~mv2.jpg",
     },
     {
       id: 4,
@@ -190,42 +207,25 @@ function Product() {
     },
     {
       id: 16,
-      name: `(42-44) L "חיתולי שקמה "אובר נייט`,
-      description: `שקמה מכנסונים סופגים גזרתי אובר נייט , מידה L
-      15 יחידות
-      מוצרי ספיגה של שקמה לספיגה מקסימלית ולשמירה על שכבת מגע יבשה
-      • לוכדי נוזלים כפולים למניעת נזילות
-      • מכנסון אובר נייט של שקמה הוא בעל כושר ספיגה של עד 12 שעות ומתאים לשימוש במהלך הלילה.
-      • סגירה רב פעמית: מנגנון סגירה המאפשר סגירה ופתיחה רב פעמיים
-      • מגע נושם ואוורירי: שכבה פנימית וחיצונית דמוית`,
-      categories: ["תחתונים סופגים", "חיתולים למבוגרים"],
-      price: "60.00",
-      imgUrl:
-        "https://static.wixstatic.com/media/eb6e45_a519cf307e304b7d8c12fbbcac616608~mv2.png",
+      name: "סינרים חד פעמיים להאכלה 100 יח'",
+      description: "",
+      categories: [],
+      price: "35.00",
+      imgUrl: "https://semantic-ui.com/images/wireframe/image.png",
     },
     {
       id: 17,
-      name: `(38-40) M "חיתולי שקמה "אובר נייט`,
-      description: `שקמה מכנסונים סופגים גזרתי אובר נייט , מידה M
-      15 יחידות
-      מוצרי ספיגה של שקמה לספיגה מקסימלית ולשמירה על שכבת מגע יבשה
-      
-      לוכדי נוזלים כפולים למניעת נזילות
-      מכנסון אובר נייט של שקמה הוא בעל כושר ספיגה של עד 12 שעות ומתאים לשימוש במהלך הלילה.
-      סגירה רב פעמית: מנגנון סגירה המאפשר סגירה ופתיחה רב פעמיים
-      מגע נושם ואוורירי: שכבה פנימית וחיצונית דמוית בד, נושמת ואוורירית המעניקה מגע רך ומסייעת במניעת גירויים
-      מכנסונים סופגים גזרתיים לשעות היום – לאנשים הזקוקים למוצרים בעלי יכולת ספיגה גבוהה
-      מכנסונים סופגים גזרתיים לשעות הלילה – לאנשים הזקוקים לדרגת הספיגה הגבוהה ביותר או לאנשים הנוטלים תרופות משתנות`,
-      categories: ["תחתונים סופגים", "חיתולים למבוגרים"],
-      price: "60.00",
-      imgUrl:
-        "https://static.wixstatic.com/media/eb6e45_d3b3484eaf654fa2afdb732cebcda828~mv2.jpg",
+      name: "כפפות חד פעמיות ניטריל",
+      description: "",
+      categories: [],
+      price: "25.00",
+      imgUrl: "https://semantic-ui.com/images/wireframe/image.png",
     },
   ];
 
-  
+
   const { id } = useParams();
-  
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [id]);
@@ -248,12 +248,13 @@ function Product() {
         />
         <div className="product-view-text">
           <h2 className="product-view-name">{product.name}</h2>
-          <p className="product-view-description">{product.description}</p>
           <p className="product-view-price">מחיר: {product.price}₪</p>
+          <hr />
+          <p className="product-view-description">{product.description}</p>
           <a
             target="_blank"
-            href={`https://api.whatsapp.com/send?phone=+972526570554&text=${whatsappText} \n\n\n
-            https://rom-shivuk.co.il/#/products/${product.id}`}
+            rel="noopener noreferrer"
+            href={`https://api.whatsapp.com/send?phone=+972546551108&text=${whatsappText} \n\n\nhttps://rom-shivuk.co.il/#/products/${product.id}`}
             className="product-view-button"
           >
             <i className="fa-brands fa-whatsapp wa-icon"></i>

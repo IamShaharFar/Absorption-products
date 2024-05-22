@@ -4,7 +4,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: wheat;
+    background-color: rgba(214, 239, 241, 0.63);
     padding: 10px;
     flex-direction: row-reverse;
     height: 80px;
