@@ -3,11 +3,14 @@ import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import logoImg from "./assets/rom-shivuk.jpg";
 import { Link } from "react-router-dom";
+import { useSelector } from 'react-redux';
+import { selectProducts } from "../redux/productsSlice";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles/Banner.css";
 import "./styles/Navbar.css";
 
-function NavBar({ onSearch, products }) {
+function NavBar({ onSearch }) {
+  const products = useSelector(selectProducts);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [searchInput, setSearchInput] = useState("");

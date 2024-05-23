@@ -43,7 +43,7 @@ const ProductCard = ({ product, isRelatedProduct }) => {
         <p className="product-price">מחיר: {product.price}₪</p>
         <a
           target="_blank"
-          href={`https://api.whatsapp.com/send?phone=+972526570554&text=${whatsappText}
+          href={`https://api.whatsapp.com/send?phone=+972546551108&&text=${whatsappText}
           ${encodedProductUrl}`}
           className="product-button"
         >
