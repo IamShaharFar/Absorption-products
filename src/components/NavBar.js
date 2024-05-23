@@ -114,13 +114,13 @@ function NavBar({ onSearch }) {
       </div> */}
       <div className="navbars">
         <button className="navbar-button">
-          מוצרי ספיגה
+          תחתונים סופגים
         </button>
         <button className="navbar-button">
           מוצרי ספיגה
         </button>
         <button className="navbar-button">
-          מוצרי ספיגה
+          חיתולים למבוגרים
         </button>
         {/* <Navbar className="bg-body-tertiary navbar-brand-container">
           <Container className="navbar-brand-container">
