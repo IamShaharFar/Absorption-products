@@ -13,7 +13,7 @@ import { useLanguage } from "./i18n";
 
 function App() {
   const rawProducts = useSelector(selectProducts);
-  const { t, getProductTranslation } = useLanguage();
+  const { t, getProductTranslation, lang } = useLanguage();
 
   const [searchQuery, setSearchQuery] = useState("");
   const [categoryFilter, setCategoryFilter] = useState("");
@@ -46,7 +46,7 @@ function App() {
         <Route path="/products/:id" element={<Product localizedProducts={localizedProducts} />} />
       </Routes>
       <Footer />
-      <Accessibility Options={{
+      <Accessibility key={lang} Options={{
         labels: {
           resetTitle:           t("accessibility.resetTitle"),
           closeTitle:           t("accessibility.closeTitle"),
