@@ -1,5 +1,10 @@
 {
   "dir": "ltr",
+  "site": {
+    "name": "Ром Шивук",
+    "home_title": "Ром Шивук | Абсорбирующие товары для взрослых",
+    "product_title": "{productName} | Ром Шивук"
+  },
   "popup": {
     "customer_service": "Служба поддержки 054-655-1108",
     "free_shipping": "Бесплатная доставка при заказе от ₪290 до вашего дома"
@@ -28,6 +33,18 @@
     "not_found": "Товар не найден",
     "related_title": "Покупатели также смотрели",
     "whatsapp_template": "Здравствуйте, я посетил сайт Ром Шивук и хотел бы приобрести {productName}, спасибо!"
+  },
+  "cart": {
+    "title": "Корзина",
+    "empty": "Корзина пуста",
+    "add_to_cart": "В корзину",
+    "remove": "Удалить",
+    "total": "Итого:",
+    "order_via_whatsapp": "Заказать через WhatsApp",
+    "whatsapp_order_header": "Здравствуйте, Ром Шивук! Я хотел бы заказать следующие товары:",
+    "whatsapp_order_item": "{quantity}x {name} - {price}₪",
+    "whatsapp_order_total": "Итого: {total}₪",
+    "quantity": "Количество"
   },
   "accessibility": {
     "resetTitle": "Сброс",

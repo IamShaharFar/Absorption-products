@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import RelatedProducts from "./home/RelatedProducts";
 import { useParams } from "react-router-dom";
 import { useLanguage } from "../i18n";
+import { usePageTitle } from "../hooks/usePageTitle";
 import "./styles/ProductView.css";
 
 function Product({ localizedProducts }) {
@@ -13,6 +14,8 @@ function Product({ localizedProducts }) {
   }, [id]);
 
   const product = localizedProducts?.find((item) => item.id === parseInt(id));
+
+  usePageTitle(product?.name);
 
   if (!product) {
     return <h2>{t("product.not_found")}</h2>;

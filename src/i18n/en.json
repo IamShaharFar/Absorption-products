@@ -1,5 +1,10 @@
 {
   "dir": "ltr",
+  "site": {
+    "name": "Rom Shivuk",
+    "home_title": "Rom Shivuk | Adult Absorption Products",
+    "product_title": "{productName} | Rom Shivuk"
+  },
   "popup": {
     "customer_service": "Customer Service 054-655-1108",
     "free_shipping": "Free shipping on orders over ₪290 to your door"
@@ -28,6 +33,18 @@
     "not_found": "Product not found",
     "related_title": "Customers who viewed this also bought",
     "whatsapp_template": "Hi, I visited Rom Shivuk and would like to purchase {productName}, thank you!"
+  },
+  "cart": {
+    "title": "Shopping Cart",
+    "empty": "Your cart is empty",
+    "add_to_cart": "Add to cart",
+    "remove": "Remove",
+    "total": "Total:",
+    "order_via_whatsapp": "Order via WhatsApp",
+    "whatsapp_order_header": "Hi Rom Shivuk! I would like to order the following products:",
+    "whatsapp_order_item": "{quantity}x {name} - {price}₪",
+    "whatsapp_order_total": "Total: {total}₪",
+    "quantity": "Quantity"
   },
   "accessibility": {
     "resetTitle": "Reset",

@@ -1,5 +1,10 @@
 {
   "dir": "rtl",
+  "site": {
+    "name": "روم شيووك",
+    "home_title": "روم شيووك | منتجات الامتصاص للبالغين",
+    "product_title": "{productName} | روم شيووك"
+  },
   "popup": {
     "customer_service": "خدمة العملاء 054-655-1108",
     "free_shipping": "شحن مجاني لكل طلب فوق ₪290 حتى باب منزلك"
@@ -28,6 +33,18 @@
     "not_found": "المنتج غير موجود",
     "related_title": "المشترون شاهدوا أيضاً",
     "whatsapp_template": "مرحباً، زرت موقع روم شيووك وأرغب في شراء {productName}، شكراً!"
+  },
+  "cart": {
+    "title": "سلة التسوق",
+    "empty": "السلة فارغة",
+    "add_to_cart": "أضف إلى السلة",
+    "remove": "إزالة",
+    "total": "الإجمالي:",
+    "order_via_whatsapp": "اطلب عبر WhatsApp",
+    "whatsapp_order_header": "مرحباً روم شيووك! أرغب في طلب المنتجات التالية:",
+    "whatsapp_order_item": "{quantity}x {name} - {price}₪",
+    "whatsapp_order_total": "الإجمالي: {total}₪",
+    "quantity": "الكمية"
   },
   "accessibility": {
     "resetTitle": "إعادة تعيين",
