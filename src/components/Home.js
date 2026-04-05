@@ -2,11 +2,13 @@
 import React from 'react';
 import Products from './home/Products';
 import { usePageTitle } from '../hooks/usePageTitle';
-function Home({products}) {
+
+function Home({ products }) {
   usePageTitle();
+
   return (
     <div>
-      <Products products={products}/>
+      <Products products={products} />
     </div>
   );
 }

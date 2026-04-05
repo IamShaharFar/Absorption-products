@@ -4,6 +4,7 @@ import PopUp from "./components/PopUp";
 import NavBar from "./components/NavBar";
 import Home from "./components/Home";
 import Product from "./components/Product";
+import CartSidebar from "./components/CartSidebar";
 import "./App.css";
 import Footer from "./components/Footer";
 import { Accessibility } from "accessibility-react/dist/index";
@@ -17,6 +18,7 @@ function App() {
 
   const [searchQuery, setSearchQuery] = useState("");
   const [categoryFilter, setCategoryFilter] = useState("");
+  const [cartOpen, setCartOpen] = useState(false);
 
   // Merge raw product data with active-language translations
   const localizedProducts = rawProducts.map((p) => {
@@ -40,11 +42,13 @@ function App() {
         onSearch={setSearchQuery}
         onCategoryFilter={setCategoryFilter}
         activeCategory={categoryFilter}
+        onCartOpen={() => setCartOpen(true)}
       />
       <Routes>
         <Route path="/" element={<Home products={filteredProducts} />} />
         <Route path="/products/:id" element={<Product localizedProducts={localizedProducts} />} />
       </Routes>
+      <CartSidebar open={cartOpen} onClose={() => setCartOpen(false)} />
       <Footer />
       <Accessibility key={lang} Options={{
         labels: {
