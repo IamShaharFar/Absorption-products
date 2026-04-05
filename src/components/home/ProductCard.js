@@ -1,54 +1,34 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/ProductCard.css";
+import { useLanguage } from "../../i18n";
 
 const ProductCard = ({ product, isRelatedProduct }) => {
-  const [showFullDescription, setShowFullDescription] = useState(false);
+  const { t } = useLanguage();
 
-  const toggleDescription = () => {
-    setShowFullDescription(!showFullDescription);
-  };
-
-  const whatsappText = `היי עיינתי באתר רום שיווק וברצוני לבצע רכישה של ${product.name} תודה!`;
-  const productUrl = `https://rom-shivuk.co.il/#/products/${product.id}`
-  const encodedProductUrl = encodeURIComponent(productUrl);
+  const whatsappText = t("product.whatsapp_template").replace("{productName}", product.name);
+  const productUrl = `https://rom-shivuk.co.il/#/products/${product.id}`;
 
   return (
-    <div
-      className={`product-card ${isRelatedProduct ? "related-product" : ""}`}
-      title={product.description}
-    >
+    <div className={`product-card${isRelatedProduct ? " related-product" : ""}`}>
       <Link to={`/products/${product.id}`} className="card-link">
         <div className="product-content">
-          <img
-            src={product.imgUrl}
-            alt={product.name}
-            className="product-image"
-          />
+          <div className="product-image-wrap">
+            <img src={product.imgUrl} alt={product.name} className="product-image" />
+          </div>
           <h3 className="product-title">{product.name}</h3>
-          <p
-            className="product-description"
-            onClick={toggleDescription}
-            style={{ cursor: "pointer" }}
-          >
-            {showFullDescription
-              ? product.description
-              : product.description.length > 30
-              ? "..." + product.description.slice(0, 30)
-              : product.description}
-          </p>
         </div>
       </Link>
       <div className="product-bottom">
-        <p className="product-price">מחיר: {product.price}₪</p>
+        <p className="product-price">{t("product.price_label")} {product.price}₪</p>
         <a
           target="_blank"
-          href={`https://api.whatsapp.com/send?phone=+972546551108&&text=${whatsappText}
-          ${encodedProductUrl}`}
+          rel="noopener noreferrer"
+          href={`https://api.whatsapp.com/send?phone=+972546551108&text=${encodeURIComponent(whatsappText)}%20${encodeURIComponent(productUrl)}`}
           className="product-button"
         >
           <i className="fa-brands fa-whatsapp wa-icon"></i>
-          <span className="product-button-text">קנה דרך נציג</span>
+          <span>{t("product.buy_via_agent")}</span>
         </a>
       </div>
     </div>

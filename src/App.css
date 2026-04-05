@@ -1,8 +1,23 @@
-body {
-  background-color: #f5f5f5;
+/* App.css */
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
-.access-exit-btn{
+body {
+  background-color: #f0f4f8;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  direction: rtl;
+}
+
+.root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.access-exit-btn {
   width: 60px;
   height: 60px;
   position: fixed;
@@ -11,18 +26,35 @@ body {
   z-index: 99;
 }
 
-/*footer*/
+/* Footer */
 .footer {
-  background-color: #333;
-  color: #fff;
+  background-color: #1a2332;
+  color: #e2e8f0;
   text-align: center;
-  padding: 5px 0;
-  margin-top: 20px;
+  padding: 24px 16px;
+  margin-top: auto;
+  border-top: 3px solid #0e9aa7;
 }
 
 .footer-content {
   max-width: 1200px;
   margin: 0 auto;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #94a3b8;
 }
 
-@media (max-width: 767px) {}
+.footer-content a {
+  color: #0e9aa7;
+  text-decoration: none;
+}
+
+.footer-content a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+  .footer {
+    padding: 16px;
+  }
+}
