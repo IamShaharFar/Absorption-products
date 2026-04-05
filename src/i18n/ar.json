@@ -45,7 +45,12 @@
     "whatsapp_order_header": "مرحباً روم شيووك! أرغب في طلب المنتجات التالية:",
     "whatsapp_order_item": "{quantity}x {name} - {price}₪",
     "whatsapp_order_total": "الإجمالي: {total}₪",
-    "quantity": "الكمية"
+    "quantity": "الكمية",
+    "clear_cart": "إفراغ السلة",
+    "decrease_quantity": "تقليل الكمية",
+    "increase_quantity": "زيادة الكمية",
+    "remove_item": "إزالة المنتج",
+    "close": "إغلاق"
   },
   "accessibility": {
     "resetTitle": "إعادة تعيين",

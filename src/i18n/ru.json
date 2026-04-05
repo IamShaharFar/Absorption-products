@@ -45,7 +45,12 @@
     "whatsapp_order_header": "Здравствуйте, Ром Шивук! Я хотел бы заказать следующие товары:",
     "whatsapp_order_item": "{quantity}x {name} - {price}₪",
     "whatsapp_order_total": "Итого: {total}₪",
-    "quantity": "Количество"
+    "quantity": "Количество",
+    "clear_cart": "Очистить корзину",
+    "decrease_quantity": "Уменьшить количество",
+    "increase_quantity": "Увеличить количество",
+    "remove_item": "Удалить товар",
+    "close": "Закрыть"
   },
   "accessibility": {
     "resetTitle": "Сброс",

@@ -45,7 +45,12 @@
     "whatsapp_order_header": "Hi Rom Shivuk! I would like to order the following products:",
     "whatsapp_order_item": "{quantity}x {name} - {price}₪",
     "whatsapp_order_total": "Total: {total}₪",
-    "quantity": "Quantity"
+    "quantity": "Quantity",
+    "clear_cart": "Clear cart",
+    "decrease_quantity": "Decrease quantity",
+    "increase_quantity": "Increase quantity",
+    "remove_item": "Remove item",
+    "close": "Close"
   },
   "accessibility": {
     "resetTitle": "Reset",

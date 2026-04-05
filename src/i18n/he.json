@@ -45,7 +45,12 @@
     "whatsapp_order_header": "היי רום שיווק! ברצוני להזמין את המוצרים הבאים:",
     "whatsapp_order_item": "{quantity}x {name} - {price}₪",
     "whatsapp_order_total": "סה\"כ: {total}₪",
-    "quantity": "כמות"
+    "quantity": "כמות",
+    "clear_cart": "רוקן סל",
+    "decrease_quantity": "הפחת כמות",
+    "increase_quantity": "הוסף כמות",
+    "remove_item": "הסר פריט",
+    "close": "סגור"
   },
   "accessibility": {
     "resetTitle": "איפוס",
