@@ -34,6 +34,23 @@
     "related_title": "Customers who viewed this also bought",
     "whatsapp_template": "Hi, I visited Rom Shivuk and would like to purchase {productName}, thank you!"
   },
+  "cart": {
+    "title": "Shopping Cart",
+    "empty": "Your cart is empty",
+    "add_to_cart": "Add to cart",
+    "remove": "Remove",
+    "clear_cart": "Clear cart",
+    "total": "Total:",
+    "order_via_whatsapp": "Order via WhatsApp",
+    "whatsapp_order_header": "Hi Rom Shivuk! I would like to order the following products:",
+    "whatsapp_order_item": "{quantity}x {name} - {price}₪",
+    "whatsapp_order_total": "Total: {total}₪",
+    "quantity": "Quantity",
+    "decrease_quantity": "Decrease quantity",
+    "increase_quantity": "Increase quantity",
+    "remove_item": "Remove item",
+    "close": "Close"
+  },
   "accessibility": {
     "resetTitle": "Reset",
     "closeTitle": "Close",

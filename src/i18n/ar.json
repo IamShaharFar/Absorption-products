@@ -34,6 +34,23 @@
     "related_title": "المشترون شاهدوا أيضاً",
     "whatsapp_template": "مرحباً، زرت موقع روم شيووك وأرغب في شراء {productName}، شكراً!"
   },
+  "cart": {
+    "title": "سلة التسوق",
+    "empty": "السلة فارغة",
+    "add_to_cart": "أضف إلى السلة",
+    "remove": "إزالة",
+    "clear_cart": "إفراغ السلة",
+    "total": "الإجمالي:",
+    "order_via_whatsapp": "اطلب عبر WhatsApp",
+    "whatsapp_order_header": "مرحباً روم شيووك! أرغب في طلب المنتجات التالية:",
+    "whatsapp_order_item": "{quantity}x {name} - {price}₪",
+    "whatsapp_order_total": "الإجمالي: {total}₪",
+    "quantity": "الكمية",
+    "decrease_quantity": "تقليل الكمية",
+    "increase_quantity": "زيادة الكمية",
+    "remove_item": "إزالة المنتج",
+    "close": "إغلاق"
+  },
   "accessibility": {
     "resetTitle": "إعادة تعيين",
     "closeTitle": "إغلاق",

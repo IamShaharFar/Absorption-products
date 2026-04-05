@@ -62,7 +62,7 @@ function CartSidebar({ open, onClose }) {
       >
         <div className="cart-header">
           <h2 className="cart-title">{t("cart.title")}</h2>
-          <button className="cart-close" onClick={onClose} aria-label="close">
+          <button className="cart-close" onClick={onClose} aria-label={t("cart.close")}>
             <i className="fa-solid fa-xmark"></i>
           </button>
         </div>
@@ -90,7 +90,7 @@ function CartSidebar({ open, onClose }) {
                         onClick={() =>
                           handleQuantityChange(item.id, item.quantity - 1)
                         }
-                        aria-label="decrease quantity"
+                        aria-label={t("cart.decrease_quantity")}
                       >
                         <i className="fa-solid fa-minus"></i>
                       </button>
@@ -100,14 +100,14 @@ function CartSidebar({ open, onClose }) {
                         onClick={() =>
                           handleQuantityChange(item.id, item.quantity + 1)
                         }
-                        aria-label="increase quantity"
+                        aria-label={t("cart.increase_quantity")}
                       >
                         <i className="fa-solid fa-plus"></i>
                       </button>
                       <button
                         className="cart-remove-btn"
                         onClick={() => dispatch(removeFromCart(item.id))}
-                        aria-label="remove item"
+                        aria-label={t("cart.remove_item")}
                       >
                         <i className="fa-solid fa-trash"></i>
                         <span>{t("cart.remove")}</span>
@@ -134,7 +134,7 @@ function CartSidebar({ open, onClose }) {
               className="cart-clear-btn"
               onClick={() => dispatch(clearCart())}
             >
-              {t("cart.remove")}
+              {t("cart.clear_cart")}
             </button>
           </div>
         )}

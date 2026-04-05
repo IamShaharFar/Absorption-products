@@ -34,6 +34,23 @@
     "related_title": "אנשים שהתעניינו במוצר קנו גם",
     "whatsapp_template": "היי עיינתי באתר רום שיווק וברצוני לבצע רכישה של {productName} תודה!"
   },
+  "cart": {
+    "title": "סל קניות",
+    "empty": "הסל ריק",
+    "add_to_cart": "הוסף לסל",
+    "remove": "הסר",
+    "clear_cart": "רוקן סל",
+    "total": "סה\"כ:",
+    "order_via_whatsapp": "הזמן דרך WhatsApp",
+    "whatsapp_order_header": "היי רום שיווק! ברצוני להזמין את המוצרים הבאים:",
+    "whatsapp_order_item": "{quantity}x {name} - {price}₪",
+    "whatsapp_order_total": "סה\"כ: {total}₪",
+    "quantity": "כמות",
+    "decrease_quantity": "הפחת כמות",
+    "increase_quantity": "הוסף כמות",
+    "remove_item": "הסר פריט",
+    "close": "סגור"
+  },
   "accessibility": {
     "resetTitle": "איפוס",
     "closeTitle": "סגור",

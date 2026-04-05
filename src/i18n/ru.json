@@ -34,6 +34,23 @@
     "related_title": "Покупатели также смотрели",
     "whatsapp_template": "Здравствуйте, я посетил сайт Ром Шивук и хотел бы приобрести {productName}, спасибо!"
   },
+  "cart": {
+    "title": "Корзина",
+    "empty": "Корзина пуста",
+    "add_to_cart": "В корзину",
+    "remove": "Удалить",
+    "clear_cart": "Очистить корзину",
+    "total": "Итого:",
+    "order_via_whatsapp": "Заказать через WhatsApp",
+    "whatsapp_order_header": "Здравствуйте, Ром Шивук! Я хотел бы заказать следующие товары:",
+    "whatsapp_order_item": "{quantity}x {name} - {price}₪",
+    "whatsapp_order_total": "Итого: {total}₪",
+    "quantity": "Количество",
+    "decrease_quantity": "Уменьшить количество",
+    "increase_quantity": "Увеличить количество",
+    "remove_item": "Удалить товар",
+    "close": "Закрыть"
+  },
   "accessibility": {
     "resetTitle": "Сброс",
     "closeTitle": "Закрыть",
