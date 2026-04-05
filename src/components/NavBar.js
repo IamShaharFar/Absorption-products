@@ -104,6 +104,13 @@ function NavBar({ onSearch, onCategoryFilter, activeCategory }) {
       </div>
 
       <nav className="navbars" aria-label={t("nav.categories_aria")}>
+        <button
+          className={`navbar-button${activeCategory === "" ? " active" : ""}`}
+          onClick={() => { onCategoryFilter(""); navigate("/"); }}
+          aria-pressed={activeCategory === ""}
+        >
+          {t("categories.all")}
+        </button>
         {CATEGORY_KEYS.map((key) => (
           <button
             key={key}
