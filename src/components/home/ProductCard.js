@@ -9,7 +9,7 @@ const ProductCard = ({ product, isRelatedProduct }) => {
   const { t } = useLanguage();
   const dispatch = useDispatch();
 
-  const whatsappText = t("product.whatsapp_template").replace("{productName}", product.name);
+  const whatsappText = `היי עיינתי באתר רום שיווק וברצוני לבצע רכישה של ${product.name} תודה!`;
   const productUrl = `https://rom-shivuk.co.il/#/products/${product.id}`;
 
   const handleAddToCart = (e) => {

@@ -21,7 +21,7 @@ function Product({ localizedProducts }) {
     return <h2>{t("product.not_found")}</h2>;
   }
 
-  const whatsappText = t("product.whatsapp_template").replace("{productName}", product.name);
+  const whatsappText = `היי עיינתי באתר רום שיווק וברצוני לבצע רכישה של ${product.name} תודה!`;
 
   return (
     <div className="product-view-component">

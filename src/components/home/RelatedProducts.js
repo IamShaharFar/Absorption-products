@@ -19,7 +19,7 @@ function RelatedProducts({ localizedProducts }) {
       </div>
       <div className="related-products-list">
         {randomProducts.map((product) => {
-          const whatsappText = t("product.whatsapp_template").replace("{productName}", product.name);
+          const whatsappText = `היי עיינתי באתר רום שיווק וברצוני לבצע רכישה של ${product.name} תודה!`;
           return (
             <div className="related-product-card" key={product.id}>
               <Link to={`/products/${product.id}`} className="card-link">

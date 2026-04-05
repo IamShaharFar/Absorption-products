@@ -21,18 +21,12 @@ function CartSidebar({ open, onClose }) {
   const isRtl = lang === "he" || lang === "ar";
 
   const buildWhatsAppMessage = () => {
-    const header = t("cart.whatsapp_order_header");
-    const itemLines = items.map((item) =>
-      t("cart.whatsapp_order_item")
-        .replace("{quantity}", item.quantity)
-        .replace("{name}", item.name)
-        .replace("{price}", (parseFloat(item.price) * item.quantity).toFixed(2))
+    const header = "היי רום שיווק! ברצוני להזמין את המוצרים הבאים:";
+    const itemLines = items.map(
+      (item) => `- ${item.quantity}x ${item.name} - ${(parseFloat(item.price) * item.quantity).toFixed(2)}₪`
     );
-    const totalLine = t("cart.whatsapp_order_total").replace(
-      "{total}",
-      total.toFixed(2)
-    );
-    return [header, ...itemLines.map((l) => `- ${l}`), totalLine].join("\n");
+    const totalLine = `סה"כ: ${total.toFixed(2)}₪`;
+    return [header, ...itemLines, totalLine].join("\n");
   };
 
   const handleWhatsAppOrder = () => {
