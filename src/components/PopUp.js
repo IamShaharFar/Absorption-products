@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles/Popup.css";
 import { useLanguage } from "../i18n";
 
 const PopUp = () => {
   const { t } = useLanguage();
+  const [visible, setVisible] = useState(true);
+
+  if (!visible) return null;
+
   return (
     <div className="pop-up-component">
       <h2 className="pop-up-phone">
@@ -14,6 +18,9 @@ const PopUp = () => {
         {t("popup.free_shipping")}
         <i className="fa-solid fa-info information-icon"></i>
       </h2>
+      <button className="pop-up-close" onClick={() => setVisible(false)} aria-label="close">
+        <i className="fa-solid fa-xmark"></i>
+      </button>
     </div>
   );
 };

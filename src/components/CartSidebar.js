@@ -8,6 +8,7 @@ import {
   clearCart,
 } from "../redux/cartSlice";
 import { useLanguage } from "../i18n";
+import heJson from "../i18n/he.json";
 import "./styles/CartSidebar.css";
 
 const WHATSAPP_PHONE = "+972546551108";
@@ -22,9 +23,10 @@ function CartSidebar({ open, onClose }) {
 
   const buildWhatsAppMessage = () => {
     const header = "היי רום שיווק! ברצוני להזמין את המוצרים הבאים:";
-    const itemLines = items.map(
-      (item) => `- ${item.quantity}x ${item.name} - ${(parseFloat(item.price) * item.quantity).toFixed(2)}₪`
-    );
+    const itemLines = items.map((item) => {
+      const hebrewName = heJson.products[item.id]?.name || item.name;
+      return `- ${item.quantity}x ${hebrewName} - ${(parseFloat(item.price) * item.quantity).toFixed(2)}₪`;
+    });
     const totalLine = `סה"כ: ${total.toFixed(2)}₪`;
     return [header, ...itemLines, totalLine].join("\n");
   };

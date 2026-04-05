@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import RelatedProducts from "./home/RelatedProducts";
 import { useParams } from "react-router-dom";
 import { useLanguage } from "../i18n";
+import heJson from "../i18n/he.json";
 import { usePageTitle } from "../hooks/usePageTitle";
 import "./styles/ProductView.css";
 
@@ -21,7 +22,8 @@ function Product({ localizedProducts }) {
     return <h2>{t("product.not_found")}</h2>;
   }
 
-  const whatsappText = `היי עיינתי באתר רום שיווק וברצוני לבצע רכישה של ${product.name} תודה!`;
+  const hebrewName = heJson.products[product.id]?.name || product.name;
+  const whatsappText = `היי עיינתי באתר רום שיווק וברצוני לבצע רכישה של ${hebrewName} תודה!`;
 
   return (
     <div className="product-view-component">

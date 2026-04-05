@@ -2,6 +2,7 @@ import React, { useMemo } from "react";
 import { Link } from "react-router-dom";
 import "../styles/RelatedProducts.css";
 import { useLanguage } from "../../i18n";
+import heJson from "../../i18n/he.json";
 
 function RelatedProducts({ localizedProducts }) {
   const { t } = useLanguage();
@@ -19,7 +20,8 @@ function RelatedProducts({ localizedProducts }) {
       </div>
       <div className="related-products-list">
         {randomProducts.map((product) => {
-          const whatsappText = `היי עיינתי באתר רום שיווק וברצוני לבצע רכישה של ${product.name} תודה!`;
+          const hebrewName = heJson.products[product.id]?.name || product.name;
+          const whatsappText = `היי עיינתי באתר רום שיווק וברצוני לבצע רכישה של ${hebrewName} תודה!`;
           return (
             <div className="related-product-card" key={product.id}>
               <Link to={`/products/${product.id}`} className="card-link">

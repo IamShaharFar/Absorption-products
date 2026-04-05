@@ -4,12 +4,14 @@ import "../styles/ProductCard.css";
 import { useLanguage } from "../../i18n";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../redux/cartSlice";
+import heJson from "../../i18n/he.json";
 
 const ProductCard = ({ product, isRelatedProduct }) => {
   const { t } = useLanguage();
   const dispatch = useDispatch();
 
-  const whatsappText = `היי עיינתי באתר רום שיווק וברצוני לבצע רכישה של ${product.name} תודה!`;
+  const hebrewName = heJson.products[product.id]?.name || product.name;
+  const whatsappText = `היי עיינתי באתר רום שיווק וברצוני לבצע רכישה של ${hebrewName} תודה!`;
   const productUrl = `https://rom-shivuk.co.il/#/products/${product.id}`;
 
   const handleAddToCart = (e) => {
