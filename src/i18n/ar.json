@@ -1,5 +1,10 @@
 {
   "dir": "rtl",
+  "site": {
+    "name": "روم شيووك",
+    "home_title": "روم شيووك | منتجات الامتصاص للبالغين",
+    "product_title": "{productName} | روم شيووك"
+  },
   "popup": {
     "customer_service": "خدمة العملاء 054-655-1108",
     "free_shipping": "شحن مجاني لكل طلب فوق ₪290 حتى باب منزلك"

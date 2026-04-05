@@ -16,7 +16,6 @@ function App() {
   const { t, getProductTranslation } = useLanguage();
 
   const [searchQuery, setSearchQuery] = useState("");
-  const [categoryFilter, setCategoryFilter] = useState("");
 
   // Merge raw product data with active-language translations
   const localizedProducts = rawProducts.map((p) => {
@@ -30,19 +29,15 @@ function App() {
   });
 
   const filteredProducts = localizedProducts
-    .filter((p) => !searchQuery || p.name.toLowerCase().includes(searchQuery.toLowerCase()))
-    .filter((p) => !categoryFilter || p.categoryKeys.includes(categoryFilter));
+    .filter((p) => !searchQuery || p.name.toLowerCase().includes(searchQuery.toLowerCase()));
 
   return (
     <div className="root">
       <PopUp />
-      <NavBar
-        onSearch={setSearchQuery}
-        onCategoryFilter={setCategoryFilter}
-        activeCategory={categoryFilter}
-      />
+      <NavBar onSearch={setSearchQuery} />
       <Routes>
         <Route path="/" element={<Home products={filteredProducts} />} />
+        <Route path="/category/:categoryKey" element={<Home products={filteredProducts} />} />
         <Route path="/products/:id" element={<Product localizedProducts={localizedProducts} />} />
       </Routes>
       <Footer />

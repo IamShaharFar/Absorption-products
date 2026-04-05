@@ -1,13 +1,15 @@
 import React, { useEffect, useState, useRef } from "react";
 import logoImg from "./assets/rom-shivuk.jpg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles/Banner.css";
 import "./styles/Navbar.css";
 import { useLanguage, LANGUAGES, CATEGORY_KEYS } from "../i18n";
 
-function NavBar({ onSearch, onCategoryFilter, activeCategory }) {
+function NavBar({ onSearch }) {
   const { lang, setLang, t } = useLanguage();
+  const navigate = useNavigate();
+  const location = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [searchInput, setSearchInput] = useState("");
   const [langOpen, setLangOpen] = useState(false);
@@ -38,8 +40,14 @@ function NavBar({ onSearch, onCategoryFilter, activeCategory }) {
   };
 
   const handleCategoryClick = (key) => {
-    onCategoryFilter(activeCategory === key ? "" : key);
+    if (location.pathname === `/category/${key}`) {
+      navigate("/");
+    } else {
+      navigate(`/category/${key}`);
+    }
   };
+
+  const isActive = (key) => location.pathname === `/category/${key}`;
 
   const handleLangSelect = (code) => {
     setLang(code);
@@ -104,9 +112,9 @@ function NavBar({ onSearch, onCategoryFilter, activeCategory }) {
         {CATEGORY_KEYS.map((key) => (
           <button
             key={key}
-            className={`navbar-button${activeCategory === key ? " active" : ""}`}
+            className={`navbar-button${isActive(key) ? " active" : ""}`}
             onClick={() => handleCategoryClick(key)}
-            aria-pressed={activeCategory === key}
+            aria-pressed={isActive(key)}
           >
             {t(`categories.${key}`)}
           </button>
