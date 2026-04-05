@@ -101,6 +101,16 @@
   font-size: 1.1rem;
 }
 
+.product-button--cart {
+  background-color: #0e9aa7;
+  color: #ffffff;
+}
+
+.product-button--cart:hover {
+  background-color: #0c8490;
+  color: #ffffff;
+}
+
 @media (max-width: 767px) {
   .product-card {
     padding: 10px 10px 12px;

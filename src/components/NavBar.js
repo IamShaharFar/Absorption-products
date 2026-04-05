@@ -5,9 +5,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles/Banner.css";
 import "./styles/Navbar.css";
 import { useLanguage, LANGUAGES, CATEGORY_KEYS } from "../i18n";
+import { useSelector } from "react-redux";
+import { selectCartCount } from "../redux/cartSlice";
 
-function NavBar({ onSearch }) {
+function NavBar({ onSearch, onCartOpen }) {
   const { lang, setLang, t } = useLanguage();
+  const cartCount = useSelector(selectCartCount);
   const navigate = useNavigate();
   const location = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
@@ -106,6 +109,18 @@ function NavBar({ onSearch }) {
           />
           <i className="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
         </div>
+
+        {/* Cart icon */}
+        <button
+          className="cart-trigger"
+          onClick={onCartOpen}
+          aria-label={t("cart.title")}
+        >
+          <i className="fa-solid fa-cart-shopping"></i>
+          {cartCount > 0 && (
+            <span className="cart-badge">{cartCount}</span>
+          )}
+        </button>
       </div>
 
       <nav className="navbars" aria-label={t("nav.categories_aria")}>
