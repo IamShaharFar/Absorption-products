@@ -1,0 +1,70 @@
+{
+  "dir": "ltr",
+  "popup": {
+    "customer_service": "Customer Service 054-655-1108",
+    "free_shipping": "Free shipping on orders over ₪290 to your door"
+  },
+  "nav": {
+    "search_placeholder": "I'm looking to buy",
+    "search_aria": "Search products",
+    "categories_aria": "Product categories",
+    "logo_alt": "Rom Shivuk - logo"
+  },
+  "categories": {
+    "all": "All",
+    "absorbent_underwear": "Absorbent Underwear",
+    "absorption_products": "Absorption Products",
+    "adult_diapers": "Adult Diapers"
+  },
+  "products_page": {
+    "our_products": "Our Products",
+    "sort_by_price": "Sort by price",
+    "high_to_low": "High to low",
+    "low_to_high": "Low to high",
+    "no_results": "Sorry, no products matched your search"
+  },
+  "product": {
+    "price_label": "Price:",
+    "buy_via_agent": "Buy via agent",
+    "not_found": "Product not found",
+    "related_title": "Customers who viewed this also bought",
+    "whatsapp_template": "Hi, I visited Rom Shivuk and would like to purchase {productName}, thank you!"
+  },
+  "accessibility": {
+    "resetTitle": "Reset",
+    "closeTitle": "Close",
+    "menuTitle": "Accessibility Menu",
+    "increaseText": "Increase Text Size",
+    "decreaseText": "Decrease Text Size",
+    "increaseLineHeight": "Increase Line Height",
+    "decreaseLineHeight": "Decrease Line Height",
+    "increaseTextSpacing": "Increase Text Spacing",
+    "decreaseTextSpacing": "Decrease Text Spacing",
+    "invertColors": "Invert Colors",
+    "grayHues": "Gray Hues",
+    "underlineLinks": "Underline Links",
+    "bigCursor": "Big Cursor",
+    "readingGuide": "Reading Guide",
+    "disableAnimations": "Disable Animations",
+    "readableFont": "Readable Font"
+  },
+  "products": {
+    "1":  { "name": "Sani Super Bandage 15 pcs 20/37 cm", "description": "" },
+    "2":  { "name": "Shakma \"Over Night\" Adult Diaper L (42-44)", "description": "Shakma shaped absorbent overnight pants, size L. 15 units. Maximum absorption and dry contact layer. Double liquid trap to prevent leaks. Up to 12 hours protection. Multi-use closure. Breathable inner and outer layers." },
+    "3":  { "name": "Shakma \"Over Night\" Adult Diaper M (38-40)", "description": "Shakma shaped absorbent overnight pants, size M. 15 units. Maximum absorption and dry contact layer. Double liquid trap to prevent leaks. Up to 12 hours protection. Multi-use closure. Breathable inner and outer layers." },
+    "4":  { "name": "Noam Adult Wipes 72 pcs XXL", "description": "Large extra-thick adult wipes with a gentle scent for personal hygiene. With chamomile and Vitamin E, alcohol-free. Resealable lid to preserve moisture. Made in Israel." },
+    "5":  { "name": "Noam Diaper Rash Cream 1 kg", "description": "Diaper rash and skin irritation cream. Protects the skin. Enriched with Vitamin E, zinc, calendula, chamomile, olive oil, sunflower oil, and propolis extract. Paraben-free, alcohol-free, SLS/SLES-free." },
+    "6":  { "name": "Noam Disposable Bed Pads 15 pcs 65/95 cm", "description": "Rectangular disposable bed pads 95×65 cm. Used as a mattress protector over the sheet. Absorbs liquids and keeps bedding clean and dry." },
+    "7":  { "name": "Shakma Disposable Bed Pads 15 pcs (97/65 cm)", "description": "Incontinence bed pad by Shakma. 65/97 cm. High absorption capacity with a breathable dry layer to protect skin health." },
+    "8":  { "name": "Breeze Absorbent Underwear M", "description": "Absorbent underwear for urinary incontinence. SUPER DRY technology with liquid capture mechanism for dryness and leak protection. Elastic fit. Suitable for nighttime use." },
+    "9":  { "name": "EUROFLEX M Absorbent Underwear", "description": "Disposable adult absorbent underwear made from soft Belgian cotton. High-cut design with HydroLock technology. Suitable for active individuals with light to moderate incontinence. Side tear-off seams." },
+    "10": { "name": "EUROFLEX XL Absorbent Underwear", "description": "Disposable adult absorbent underwear made from soft Belgian cotton. High-cut design with HydroLock technology. Suitable for active individuals with light to moderate incontinence. Side tear-off seams." },
+    "11": { "name": "EUROFLEX L Absorbent Underwear", "description": "Disposable adult absorbent underwear made from soft Belgian cotton. High-cut design with HydroLock technology. Suitable for active individuals with light to moderate incontinence. Side tear-off seams." },
+    "12": { "name": "Noam \"All Night\" Adult Diapers XL", "description": "Noam shaped overnight absorbent pants, size XL (46-52). Waist 150-175 cm. 15 units. Double closure, advanced liquid trapping, high absorption, soft touch." },
+    "13": { "name": "Noam \"All Night\" Adult Diapers L", "description": "Noam shaped overnight absorbent pants, size L (42-44). Waist 120-150 cm. 15 units. Double closure, advanced liquid trapping, high absorption, soft touch." },
+    "14": { "name": "Noam \"All Night\" Adult Diapers M", "description": "Noam shaped overnight absorbent pants, size M (38-40). Waist 80-120 cm. 15 units. Double closure, advanced liquid trapping, high absorption, soft touch." },
+    "15": { "name": "Shakma \"Over Night\" Adult Diaper XL (46-48)", "description": "Shakma shaped absorbent overnight pants, size XL. 15 units. Double liquid trap, up to 12 hours protection, multi-use closure, breathable layers." },
+    "16": { "name": "Disposable Feeding Bibs 100 pcs", "description": "" },
+    "17": { "name": "Disposable Nitrile Gloves", "description": "" }
+  }
+}

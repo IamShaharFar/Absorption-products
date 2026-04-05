@@ -1,117 +1,152 @@
+/* Products.css */
 .products-component {
-    text-align: center;
-    padding: 20px;
-}
-
-.mobile-logo-container{
-    display: flex;
-   justify-content: center; 
-}
-
-.mobile-logo {
-    display: none;
+  text-align: center;
+  padding: 28px 20px 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .hot-deals-heading {
-    font-size: 60px;
-    margin-bottom: 20px;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 24px;
+  letter-spacing: -0.5px;
+}
+
+/* Filter bar */
+.products-and-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .filter-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 8px;
 }
 
 .filter-options {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
 }
 
+/* Price sort dropdown */
 .filter-select {
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 50px;
+  background-color: #f8fafc;
+  color: #334155;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s ease;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2364748b' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: left 12px center;
+  padding-left: 32px;
 }
 
+.filter-select:focus {
+  border-color: #0e9aa7;
+}
+
+/* Category pill buttons */
+.category-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.category-pill {
+  background-color: #f1f5f9;
+  color: #334155;
+  border: 1.5px solid #cbd5e1;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.category-pill:hover {
+  background-color: #e0f7fa;
+  border-color: #0e9aa7;
+  color: #0e9aa7;
+}
+
+.category-pill.active {
+  background-color: #0e9aa7;
+  color: #ffffff;
+  border-color: #0e9aa7;
+  box-shadow: 0 2px 8px rgba(14, 154, 167, 0.3);
+}
+
+/* Products grid */
 .products-list {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  justify-items: center;
 }
 
-.home-p-card {
-    margin-right: 100px;
+.no-results-message {
+  grid-column: 1 / -1;
+  font-size: 1.3rem;
+  color: #64748b;
+  padding: 40px 0;
 }
 
+/* Mobile */
 @media (max-width: 767px) {
+  .products-component {
+    margin-top: 170px;
+    padding: 16px 10px 32px;
+  }
 
-    .mobile-logo-container{
-        margin-bottom: 20px;
+  .hot-deals-heading {
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
 
-    }
+  .products-list {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 12px;
+  }
 
-    .mobile-logo {
-        display: block;
-        height: 110px;
-        object-fit: contain;
-        margin-bottom: 10px;
-        margin-top: 20px;
-    }
-    
-    .products-list {
-        gap: 0px;
-    }
+  .category-pills {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding-bottom: 4px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 
-    .product-card {
-        width: 43%;
-    }
+  .category-pills::-webkit-scrollbar {
+    display: none;
+  }
 
-    .product-title{
-        font-size: 1rem;
-    }
+  .filter-container {
+    flex-direction: column;
+    gap: 10px;
+  }
 
-    .product-price{
-        font-size: 0.9rem;
-        margin-top: 0px;
-        margin-bottom: 20px;
-    }
-
-    .product-button{
-        font-size: 0.6rem;
-        font-weight: bold;
-    }
-
-    .wa-icon{
-        font-weight: bold;
-    }
-
-    .hot-deals-heading {
-        font-size: 40px;
-        font-weight: 400;
-    }
-
-    .filter-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .filter-options {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .filter-select,
-    .filter-input {
-        width: 100%;
-        max-width: 250px;
-    }
-
-    .products-component {
-        margin-top: 160px;
-    }
+  .filter-select {
+    width: 200px;
+  }
 }
