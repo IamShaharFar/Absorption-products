@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import logoImg from "./assets/rom-shivuk.jpg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles/Banner.css";
 import "./styles/Navbar.css";
@@ -8,6 +8,7 @@ import { useLanguage, LANGUAGES, CATEGORY_KEYS } from "../i18n";
 
 function NavBar({ onSearch, onCategoryFilter, activeCategory }) {
   const { lang, setLang, t } = useLanguage();
+  const navigate = useNavigate();
   const [isScrolled, setIsScrolled] = useState(false);
   const [searchInput, setSearchInput] = useState("");
   const [langOpen, setLangOpen] = useState(false);
@@ -38,7 +39,9 @@ function NavBar({ onSearch, onCategoryFilter, activeCategory }) {
   };
 
   const handleCategoryClick = (key) => {
-    onCategoryFilter(activeCategory === key ? "" : key);
+    const next = activeCategory === key ? "" : key;
+    onCategoryFilter(next);
+    navigate("/");
   };
 
   const handleLangSelect = (code) => {
